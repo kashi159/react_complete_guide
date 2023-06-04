@@ -9,7 +9,13 @@ function App() {
       date: new Date(2020, 7, 14),
       location: "Sanitary",
     },
-    { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12), location: "Appliance" },
+    {
+      id: "e2",
+      title: "New TV",
+      amount: 799.49,
+      date: new Date(2021, 2, 12),
+      location: "Appliance",
+    },
     {
       id: "e3",
       title: "Car Insurance",
@@ -36,7 +42,6 @@ function App() {
           location={expense.location}
         />
       ))}
-      
     </div>
   );
 }
