@@ -33,13 +33,15 @@ const App = () => {
       location: "Furniture",
     },
   ];
+
   return (
     <div>
       <h2>Let's get started!</h2>
       <Card className="expenses">
         {expenses.map((expense) => (
           <Expenses
-            key = {expense.id}
+            key={expense.id}
+            id={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
@@ -49,6 +51,6 @@ const App = () => {
       </Card>
     </div>
   );
-}
+};
 
 export default App;
