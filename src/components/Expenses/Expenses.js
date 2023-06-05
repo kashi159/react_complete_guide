@@ -10,7 +10,7 @@ const Expenses = (props) => {
       title={props.title}
       amount={props.amount}
       date={props.date}
-      location={props.location}
+      // location={props.location}
     />
   );
 };

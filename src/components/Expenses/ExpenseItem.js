@@ -29,7 +29,7 @@ const ExpenseItem = (props) => {
       <ExpenseDetails
         id={props.id}
         amount={price}
-        location={props.location}
+        // location={props.location}
         title={title}
       />
       <button onClick={clickHandler}>Change Title</button>
