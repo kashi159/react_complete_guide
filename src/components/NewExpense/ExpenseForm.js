@@ -2,37 +2,63 @@ import React, {useState} from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
+  // Approach 1 - change state seperately//
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
+  //Approach 2 - change state using one state//
   // const [userInput, setUserInput] = useState({
-  //   setEnteredTitle: '',
-  //   setEnteredAmount: '',
-  //   setEnteredDate: ''
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   enteredDate: ''
   // })
   
   const titleChangeHandler = (event)=> {
+    //Approach 1 - change state seperately//
     setEnteredTitle(event.target.value)
+
+    //Approach 2(a) - change state using one state//
     // setUserInput({
     //   ...userInput,
-    //   setEnteredTitle: event.target.value
+    //   enteredTitle: event.target.value
+    // })
+
+    //Approach 2(b) - change state using one state better way//
+    // setUserInput((prevState)=>{
+    //   return {...prevState, enteredTitle: event.target.value}
     // })
   }
 
   const amountChangeHandler = (event)=> {
+    //Approach 1 - change state seperately
     setEnteredAmount(event.target.value)
+
+    //Approach 2(a) - change state using one state//
     // setUserInput({
     //   ...userInput,
-    //   setEnteredAmount: event.target.value
+    //   enteredAmount: event.target.value
+    // })
+
+    //Approach 2(b) - change state using one state better way//
+    // setUserInput((prevState)=>{
+    //   return {...prevState, enteredAmount: event.target.value}
     // })
   }
 
   const dateChangeHandler = (event)=> {
+    //Approach 1 - change state seperately
     setEnteredDate(event.target.value)
+
+    //Approach 2(a) - change state using one state//
     // setUserInput({
     //   ...userInput,
-    //   setEnteredDate: event.target.value
+    //   enteredDate: event.target.value
+    // })
+
+    //Approach 2(b) - change state using one state better way//
+    // setUserInput((prevState)=>{
+    //   return {...prevState, enteredDate: event.target.value}
     // })
   }
 
