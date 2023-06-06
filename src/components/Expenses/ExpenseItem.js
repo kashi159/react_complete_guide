@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
@@ -6,11 +6,11 @@ import ExpenseDetails from "./ExpenseDetails";
 import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
-  const [title, setTitle] = useState(props.title);
+  // const [title, setTitle] = useState(props.title);
 
-  const clickHandler = () => {
-    setTitle('Updated!')
-  };
+  // const clickHandler = () => {
+  //   setTitle('Updated!')
+  // };
 
   // const deleteExpense = (e) => {
   //   const listItem = e.target.closest(".expense-item");
@@ -24,9 +24,9 @@ const ExpenseItem = (props) => {
         id={props.id}
         amount={props.amount}
         // location={props.location}
-        title={title}
+        title={props.title}
       />
-      <button onClick={clickHandler}>Change Title</button>
+      <button>Change Title</button>
     </Card>
   );
 };

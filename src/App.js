@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import Card from "./components/UI/Card";
 import NewExpense from "./components/NewExpense/NewExpense";
@@ -36,24 +36,27 @@ const App = () => {
     },
   ]);
 
-  const addExpenseHandler = (newExpense) =>{
+  const addExpenseHandler = (newExpense) => {
     setExpenses((prevExpenses) => {
       return [newExpense, ...prevExpenses];
     });
-  }
+  };
 
-  const [filteredYear, setSelectedYear] = useState('2023')
+  const [filteredYear, setSelectedYear] = useState("2023");
 
-  const yearChangeFilter = (selectedYear)=>{
-    setSelectedYear(selectedYear)
-  }
+  const yearChangeFilter = (selectedYear) => {
+    setSelectedYear(selectedYear);
+  };
 
   return (
     <div>
       <NewExpense onAddNewExpense={addExpenseHandler} />
       <Card className="expenses">
         <div>
-        <ExpensesFilter selected={filteredYear} onChangeYear={yearChangeFilter}/>
+          <ExpensesFilter
+            selected={filteredYear}
+            onChangeYear={yearChangeFilter}
+          />
         </div>
         {expenses.map((expense) => (
           <Expenses
@@ -63,7 +66,6 @@ const App = () => {
             amount={expense.amount}
             date={expense.date}
             // location={expense.location}
-            
           />
         ))}
       </Card>
