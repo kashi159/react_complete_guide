@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-
 const App = () => {
   const [expenses, setExpenses] = useState([
     {
@@ -41,12 +40,10 @@ const App = () => {
     });
   };
 
-  
-
   return (
     <div>
       <NewExpense onAddNewExpense={addExpenseHandler} />
-      <Expenses items={expenses}/>
+      <Expenses items={expenses} />
     </div>
   );
 };
