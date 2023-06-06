@@ -26,7 +26,7 @@ const ExpenseItem = (props) => {
         // location={props.location}
         title={props.title}
       />
-      <button>Change Title</button>
+      {/* <button>Change Title</button> */}
     </Card>
   );
 };
